@@ -17,7 +17,7 @@ export class Select {
 
     const selectBtn = this.settings.wrapper.querySelector(
         '.select__btn'
-      ) as HTMLButtonElement,
+      ) as HTMLElement,
       selectList = this.settings.wrapper.querySelector(
         '.select__list'
       ) as HTMLElement,
@@ -39,7 +39,6 @@ export class Select {
         e.stopPropagation();
         const target = e.target as HTMLElement;
         selectBtn.textContent = target.textContent;
-        selectBtn.focus();
         selectInput.value = target.dataset.value;
         selectList.classList.remove(this.settings.activeClass);
       });
