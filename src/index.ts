@@ -1,9 +1,12 @@
-import { accordeon } from './components/accordeon';
-const a = 1;
-const b = a;
-const c = accordeon;
+import './app.scss';
+import { Select } from './components/select/Select';
 
-console.log(1);
-console.log(b);
-console.log(c);
-console.log(a);
+document.querySelectorAll('.select__wrapper').forEach((select) => {
+  new Select({
+    wrapper: select as HTMLElement,
+    selectBtnSelector: '.select__btn',
+    selectListSelector: '.select__list',
+    selectItemsSelector: '.select__list-item',
+    activeClass: 'active',
+  });
+});
