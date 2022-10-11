@@ -1,6 +1,7 @@
 import './app.scss';
 import { Select } from './components/select/Select';
 import { ProgressBar } from './components/progressBar/ProgressBar';
+import { Accordion } from './components/accordion/Accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.select__wrapper').forEach((select) => {
@@ -17,6 +18,15 @@ window.addEventListener('DOMContentLoaded', () => {
     new ProgressBar({
       progressWrapper: el as HTMLElement,
       progressSelector: '.progress',
+    });
+  });
+
+  document.querySelectorAll('.accordion').forEach((el) => {
+    new Accordion({
+      accordion: el as HTMLElement,
+      accordionHeadSelector: '.accordion__head',
+      accordionHeadActiveClass: 'accordion__head--active',
+      accordionContentActiveClass: 'accordion__content--active',
     });
   });
 });
