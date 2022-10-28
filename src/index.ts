@@ -2,6 +2,7 @@ import './app.scss';
 import { Select } from './components/select/Select';
 import { ProgressBar } from './components/progressBar/ProgressBar';
 import { Accordion } from './components/accordion/Accordion';
+import { Counter } from './components/counter/Counter';
 
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.select__wrapper').forEach((select) => {
@@ -29,4 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
       accordionContentActiveClass: 'accordion__content--active',
     });
   });
+
+  new Counter('#counter');
 });
