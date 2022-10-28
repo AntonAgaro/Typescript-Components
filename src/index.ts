@@ -3,6 +3,7 @@ import { Select } from './components/select/Select';
 import { ProgressBar } from './components/progressBar/ProgressBar';
 import { Accordion } from './components/accordion/Accordion';
 import { Counter } from './components/counter/Counter';
+import './components/switch/switch';
 
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.select__wrapper').forEach((select) => {
