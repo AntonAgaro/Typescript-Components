@@ -4,6 +4,7 @@ import { ProgressBar } from './components/progressBar/ProgressBar';
 import { Accordion } from './components/accordion/Accordion';
 import { Counter } from './components/counter/Counter';
 import './components/switch/switch';
+import { Carousel } from './components/carousel/Carousel';
 
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.select__wrapper').forEach((select) => {
@@ -33,4 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   new Counter('#counter');
+
+  new Carousel();
 });
