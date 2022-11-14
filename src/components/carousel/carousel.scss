@@ -1,0 +1,60 @@
+.carousel {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+
+  &__indicators {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    margin: 0 15%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__indicators-item {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 6px;
+    cursor: pointer;
+    background: #ffffff;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+    & + & {
+      margin-left: 3px;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  &__slides {
+    height: 100%;
+    display: flex;
+  }
+
+  &__slide {
+    height: 100%
+  }
+
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
